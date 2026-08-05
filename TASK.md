@@ -51,13 +51,13 @@ Bukan "hampir jalan lokal." Bukan "tinggal satu bug lagi." Harus live.
 - [ ] `pip install fastapi uvicorn[standard] supabase pydantic-settings python-dotenv python-multipart`
 - [ ] `pip freeze > requirements.txt`
 - [ ] Buat `api/.env` (dari `.env.example`)
-- [ ] Tulis `api/app/core/config.py` — Settings via pydantic-settings
-- [ ] Tulis `api/app/core/errors.py` — TitisError, UnauthorizedError, NotFoundError
-- [ ] Tulis `api/app/models/schemas.py` — CreateItemRequest, InboxItem, HealthResponse
-- [ ] Tulis `api/app/services/supabase.py` — get_supabase() singleton
-- [ ] Tulis `api/app/routes/health.py` — GET /health
-- [ ] Tulis `api/app/routes/items.py` — GET + POST + DELETE /items dengan auth
-- [ ] Tulis `api/app/main.py` — FastAPI app + CORS + mount routers
+- [x] Tulis `api/app/core/config.py` — Settings via pydantic-settings
+- [x] Tulis `api/app/core/errors.py` — TitisError, UnauthorizedError, NotFoundError
+- [x] Tulis `api/app/models/schemas.py` — CreateItemRequest, InboxItem, HealthResponse
+- [x] Tulis `api/app/services/supabase.py` — get_supabase() singleton
+- [x] Tulis `api/app/routes/health.py` — GET /health
+- [x] Tulis `api/app/routes/items.py` — GET + POST + DELETE /items dengan auth
+- [x] Tulis `api/app/main.py` — FastAPI app + CORS + mount routers
 - [ ] Buat tabel `inbox_items` di Supabase SQL Editor
 - [ ] Enable RLS + buat policy `user_owns_items`
 - [ ] Buat index `idx_inbox_items_user_created`
@@ -95,7 +95,7 @@ Bukan "hampir jalan lokal." Bukan "tinggal satu bug lagi." Harus live.
 
 ### Deploy V1
 
-- [ ] Tulis `api/Dockerfile` — python:3.11-slim + uvicorn
+- [x] Tulis `api/Dockerfile` — python:3.11-slim + uvicorn
 - [ ] `railway login && cd api && railway init --name titis-api`
 - [ ] `railway variables set SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... GEMINI_API_KEY="" FRONTEND_URL=https://titis.vercel.app`
 - [ ] `railway up` → catat URL Railway
