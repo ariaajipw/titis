@@ -37,20 +37,20 @@ Bukan "hampir jalan lokal." Bukan "tinggal satu bug lagi." Harus live.
 
 ### Setup Awal (Sekali)
 
-- [ ] `mkdir -p ~/Projects/titis && cd ~/Projects/titis && git init`
-- [ ] Buat `.gitignore` (node_modules, dist, .env, .venv, __pycache__)
-- [ ] `mkdir -p docs .ecc`
-- [ ] `touch TASK.md PRD.md ARCHITECTURE.md AGENTS.md .env.example`
-- [ ] `touch docs/decisions.md docs/mistakes.md`
-- [ ] Push ke GitHub (repo baru, public atau private)
+- [x] `mkdir -p ~/Projects/titis && cd ~/Projects/titis && git init`
+- [x] Buat `.gitignore` (node_modules, dist, .env, .venv, __pycache__)
+- [x] `mkdir -p docs .ecc`
+- [x] `touch TASK.md PRD.md ARCHITECTURE.md AGENTS.md .env.example`
+- [x] `touch docs/decisions.md docs/mistakes.md`
+- [x] Push ke GitHub (repo baru, public atau private)
 
 ### Backend V1
 
-- [ ] `mkdir -p api/app/{routes,services,models,core} api/tests`
-- [ ] Setup Python venv: `cd api && python -m venv .venv && source .venv/bin/activate`
-- [ ] `pip install fastapi uvicorn[standard] supabase pydantic-settings python-dotenv python-multipart`
-- [ ] `pip freeze > requirements.txt`
-- [ ] Buat `api/.env` (dari `.env.example`)
+- [x] `mkdir -p api/app/{routes,services,models,core} api/tests`
+- [x] Setup Python venv: `cd api && python -m venv .venv && source .venv/bin/activate`
+- [x] `pip install fastapi uvicorn[standard] supabase pydantic-settings python-dotenv python-multipart`
+- [x] `pip freeze > requirements.txt`
+- [x] Buat `api/.env` (dari `.env.example`)
 - [x] Tulis `api/app/core/config.py` — Settings via pydantic-settings
 - [x] Tulis `api/app/core/errors.py` — TitisError, UnauthorizedError, NotFoundError
 - [x] Tulis `api/app/models/schemas.py` — CreateItemRequest, InboxItem, HealthResponse
@@ -71,13 +71,13 @@ Bukan "hampir jalan lokal." Bukan "tinggal satu bug lagi." Harus live.
 
 ### Frontend V1
 
-- [ ] `npm create vite@latest web -- --template react-ts && cd web && npm install`
-- [ ] `npm install zustand @supabase/supabase-js`
-- [ ] `npm install -D tailwindcss @tailwindcss/vite`
-- [ ] Setup `web/vite.config.ts` — plugin react + tailwind + proxy `/api`
-- [ ] Setup `web/src/index.css` — `@import tailwindcss` + `@theme` design tokens
-- [ ] Update `web/index.html` — Google Fonts (DM Sans + DM Mono)
-- [ ] Buat `web/.env.local` — VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY, VITE_API_URL
+- [x] `npm create vite@latest web -- --template react-ts && cd web && npm install`
+- [x] `npm install zustand @supabase/supabase-js`
+- [x] `npm install -D tailwindcss @tailwindcss/vite`
+- [x] Setup `web/vite.config.ts` — plugin react + tailwind + proxy `/api`
+- [x] Setup `web/src/index.css` — `@import tailwindcss` + `@theme` design tokens
+- [x] Update `web/index.html` — Google Fonts (DM Sans + DM Mono)
+- [x] Buat `web/.env.local` — VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY, VITE_API_URL
 - [ ] Tulis `web/src/types/index.ts` — ItemType, ItemStatus, InboxItem, CreateItemPayload
 - [ ] Tulis `web/src/services/supabaseClient.ts` — singleton createClient
 - [ ] Tulis `web/src/services/api.ts` — createItem, listItems, deleteItem + getAuthHeader
